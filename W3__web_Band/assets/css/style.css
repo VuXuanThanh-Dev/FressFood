@@ -1,0 +1,374 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+
+ul{
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+html{
+    font-family: 'Lato', sans-serif;
+}
+/* /end reset  */
+
+
+/* header  */
+.header{
+    height:2.875rem;
+    background:#000;
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+.header__nav{
+    height:2.875rem;
+}
+.header__nav-list{
+    height:2.875rem;
+}
+.header__nav-item{
+    display:inline-block;
+    position:relative;
+    line-height: 2.875rem;
+    height:100%;
+}
+.header__nav-icon{
+    padding-left:5px;
+    padding-bottom: 5px;
+}
+.header__nav-link{
+    display:inline-block;
+    padding:0px 24px;
+}
+.header__nav-item:hover .header__nav-link{
+    background:#cccccc;
+    color:black;
+}
+.header__subnav-list{
+    position: absolute;
+    display: none;
+}
+.header__nav-link{
+    color:white;
+}
+
+.header__subnav-list{
+    width:9.375rem;
+    background:white;
+    
+}
+
+.header__subnav-link{
+    padding:0px 12px;
+    display:block;
+}
+
+.header__subnav-item:hover .header__subnav-link{
+    background:#cccccc;
+}
+
+.header__nav-item:nth-child(5):hover .header__subnav-list{
+    display:block;
+}
+
+.header__search{
+    height:100%;
+    width:300px;
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+
+.header__search-input{
+    outline: none;
+    flex:1;
+    height:100%;
+    transform:scaleX(0);
+}
+.header__search-button{
+    height: 100%;
+    outline: none;
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border:none;
+}
+.header__search-icon{
+    font-size: 18px;
+    height:100%;
+    line-height: 46px;
+    padding:0px 23px;
+    color:white;
+    cursor:pointer;
+}
+.header__search-icon:hover{
+    background:orangered;
+}
+/* slider  */
+.slider{
+    position:relative;
+    margin-top:46px;
+    /* padding sau nos la % thi no se can chieu cao theo chieu rong cua chinh no. */
+    padding-top:50%;
+    /* url background-position / background-size background-repeat; */
+    background:url("../img/new_york.jpg") top center / cover no-repeat ;
+}
+
+
+.slider__text{
+    position: absolute;
+    color: white;
+    text-align: center;
+    bottom:20px;
+    left:50%;
+    /* vì nó đang căn giữa map nhưng nó lại bị lệch nên ta phải lui lại một khoảng nữa thì ta dùng
+    transform: translateX(-50%) để nó căn giữa so với chính nó. */
+    /* cach2: widht:100%;
+       cach3: left:0; right:0; */
+    transform: translateX(-50%);
+    transform:translate(-50%,0%);
+}
+.slider__text-message{
+    font-weight: bold;
+    padding-top:20px
+}
+.slider__text-place{
+    font-size: 20px;
+}
+/* content  */
+.content{
+
+}
+.content__section{
+    width:800px;
+    margin:auto;
+    padding-top:87px;
+    padding-bottom: 113px;
+}
+.content__header{
+    padding-bottom: 33px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+.content__slogant{
+    padding-bottom: 27px;
+    font-style:italic;
+    opacity:0.7;
+    transform:translateX(-0.5%);
+}
+.content__header,.content__slogant{
+    text-align: center;
+}
+.content__text{
+    text-align: justify;
+    line-height:1.5;
+    padding-bottom: 74px;
+}
+.content__card{
+    margin:0 20px;
+    margin-right:105px;
+    
+}
+.content__card, .content__card-picture{
+    width:155px;
+    text-align: center;
+}
+.content__card-picture{
+    border-radius:5px;
+}
+.conent__card-header{
+    padding-bottom:20px;
+    font-weight: 500;
+}
+.content__card-group{
+    display:flex;
+}
+/* tour */
+.content__tour{
+    background:#000;
+    color:#fff;
+    /* padding-bottom:113px;    */
+}
+
+.content__tour-infor{
+    margin-bottom:35px;
+    border:1px solid #ddd;
+    border-bottom: none;
+}
+
+.content__tour-detail{
+    height:40px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    padding:0px  0px 0px 18px;
+    border-bottom:1px solid #ddd;
+}
+.content__tour-month{
+    color:#333;
+    padding-right:20px;
+}
+
+.content__tour-status{
+    padding:7px 10px;
+    background:orangered;
+    cursor: pointer;
+}
+.content__tour-status--fixed{
+    background:#000;
+    padding:0px 8px;
+    border-radius: 48%;
+    
+}
+.content__tour-detail--fixed{
+    justify-content: space-between;
+    padding-right:20px;
+}
+
+.content__ticket-detail{
+    width:calc(100% / 3);
+    background:#fff;
+    color:black;
+}
+
+.content__ticket-description
+{
+    padding:0 25px 25px 17px;
+    line-height: 1.4;
+    
+}
+.content__ticket-header {
+    padding:25px 17px;   
+}
+.content__ticket-date{
+    padding-bottom:25px;
+    padding-left:17px;
+    opacity:0.6;
+}
+.content__ticket-booking{
+    margin-left: 17px;
+    margin-bottom:16px;
+    padding:13px 12px;
+    background:black;
+    color:#fff;
+    border:none;
+    outline:none;
+}
+.content__ticket-booking:hover{
+    background:#cccccc;
+    cursor: pointer;
+}
+.content__ticket-img{
+    width:100%;
+}
+.content__ticket{
+    display:flex;
+
+}
+.content__ticket-detail--padding{
+    margin:0 17px;
+}
+/* contact */
+.content__contact-item{
+    display:flex;
+    align-items: center;
+    margin-bottom: 13px;
+    height: 20px;
+    line-height: 20px;
+}
+.content__contact-item--padding{
+    padding-left:4px;
+}
+.content__contact-icon{
+    padding-right:18px;
+    font-size: 1rem;
+    text-align: left;
+}
+.content__contact-infor{
+    width:50%;
+}
+.content__contact{
+    display:flex;
+    /* margin-bottom: 114px; */
+}
+.content__form-group{
+    display: flex;
+}
+.content__form-item{
+    height:40px;
+    display: flex;
+    margin-bottom: 10px;
+    border:1px solid #ddd;
+    flex:1;
+}
+.content__form-input{
+    height: 100%;
+    outline: none;
+    border:none;
+    padding:0 10px;
+    flex:1;
+}
+.content__form-item--margin{
+    margin-bottom: 17px;
+    flex:1;
+}
+.content__form-item--marginRight{
+    margin-right: 17px;
+}
+.content__feedback{
+    width:50%;
+}
+.content__form-btn{
+    display:flex;
+    justify-content: flex-end;
+}
+.content__form-submit{
+    padding:8px;
+    background:#000;
+    color:#fff;
+    cursor: pointer;
+    border:none;
+}
+.content__form-submit:hover{
+    background:#cccccc;
+}
+
+.content__image-sub{
+    width:100%;
+
+}
+.content__form-input:focus{
+    border:2px solid black;
+}
+/* footer  */
+.footer{
+    padding:64px 0;
+}
+.footer__group-icon{
+    width:100%; 
+    text-align: center;
+}
+.footer__icon{
+    color:#656565;     
+}
+.footer__icon:hover{
+    opacity:0.6;
+}
+.footer__authentication{
+    text-align: center;
+    opacity:0.6;
+}
+.footer__link{
+    text-decoration: underline;
+}
