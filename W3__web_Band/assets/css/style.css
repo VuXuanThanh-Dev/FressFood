@@ -372,3 +372,119 @@ html{
 .footer__link{
     text-decoration: underline;
 }
+/* modal */
+.modal__overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0, 0, 0, 0.3);
+    display:none;
+}
+
+.modal__pay{
+    position: fixed;
+    z-index: 2;
+    width:60%;
+    /* top:70px; */
+    left:50%;
+    background:#fff;
+    
+    /* left:50%; */
+    transform: translateX(-50%);
+    top:-100%;
+}
+
+.modal__pay-header{
+    padding:52px 0px;
+    text-align: center;
+    background:#009688;
+    color:white;
+}
+.modal__pay-form{
+    margin-top: 22px;
+    margin-bottom: 32px;
+}
+.modal__pay-padding{
+    margin:0px 17px;
+}
+
+.modal__pay-footer{
+    margin-bottom: 20px;
+}
+
+.modal__pay-label{
+    padding-bottom:20px;
+}
+.modal__pay-container{
+    padding-bottom:20px;
+}
+
+.fa-suitcase{
+    padding-right: 20px;
+    font-size: 22px;
+}
+.modal__pay-header-text{
+    font-size:25px;
+    letter-spacing: 3px;
+}
+.modal__pay-header{
+    position:relative;
+}
+.fa-times-header{
+    position: absolute;
+    right:17px;
+    top:20px;
+   
+}
+.modal__pay-container{
+    display:flex;
+}
+.modal__pay-input{
+    height:40px;
+    flex:1;
+    padding-left:12px;
+}
+.modal__pay-submit{
+    display: flex;
+}
+.modal__pay-btn{
+    height:55px;
+    flex:1;
+    background: #009688;
+    border:none;
+    color:white;
+    font-size: 16px;
+}
+.modal__pay-btn:hover{
+    cursor: pointer;
+    background: #cccccc;
+}
+
+.modal__pay-btn-footer{
+    padding:10px;
+    background: #F44336;
+    color:white;
+    font-size:15px;
+    border:none;
+    font-weight: 500;
+}
+.modal__pay-btn-footer:hover{
+    color:black;
+    cursor: pointer;
+    background: #cccccc;
+}
+.modal__pay-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__pay-footer-link{
+    color:#2F9DF3;
+    text-decoration: underline;
+}
+.fa-times-header{
+    color:white;
+    cursor: pointer;
+}
