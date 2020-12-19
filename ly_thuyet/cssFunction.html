@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css function</title>
+    <style>
+        :root{
+            --text-color: green;
+        }
+        a{
+            position: relative;
+            
+        }
+        a::after{
+            content:" " attr(href);
+            padding:10px;
+            font-size:1.2rem;
+            position:absolute;
+            top:22px;
+            left:-5px;
+            width:130px;
+            background:white;
+            border:1px solid #ddd;
+        }
+        a::before{
+            content:"";
+            border:1rem solid;
+            border-color:transparent transparent #ddd transparent;
+            position:absolute;
+            top:-8px;
+        }
+        ul{
+            padding-top:calc(1rem);
+            color:var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- nó là hàm trong css:
+    attr(thuoc tinh)
+    calc(bieu thuc)
+    var(variable)
+    rgb(so1, so2, so3) mau sac
+    rgba(so1, so2, so3, alpha) màu nhìn xuyên qua
+    linear-gradient() nhiều màu thay đổi theo góc-->
+    <div class="container">
+        <a href="http://google.com" title="đi tới google">google:</a>
+        <ul>
+            <li>list 1</li>
+            <li>list 2</li>
+
+        </ul>
+    </div>
+</body>
+</html>

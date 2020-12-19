@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:relative</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .heading{
+            position:relative;
+            top:10px;
+            left:20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 5px;
+            display: block;
+        }
+        ul{
+            padding:0;
+            margin:0;
+            list-style: none;
+        }
+        li.navbar-list__item {
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+            position:relative;
+        }
+        .navbar-list__link:hover{
+            background: aqua;
+            color: yellow;
+        }
+        .navbar-list__sb1{
+            position:absolute;
+        }
+        .navbar-list__sb1-item{
+            text-align: left;
+            width:122px;
+        }
+        a.navbar-list__sb1-link{
+            padding:7px 0px 7px 27px;
+            
+        }
+        a.navbar-list__sb1-link:hover{
+            display:block;
+            background:aqua;
+            color:white;
+            
+        }
+        .navbar-list__sb1{
+            display:none;
+        }
+        .navbar-list__item:nth-child(2):hover .navbar-list__sb1{
+            display:block;
+        }
+        .navbar-list__sb2{
+            position:absolute;
+            top: 66px;
+            left: 116px;
+            width: 122px;
+            display:none;
+        }
+        a.navbar-list__sb2-link{
+            display:block;
+            padding:7px 0px 7px 27px;
+
+        }
+        .navbar-list__sb1-item:nth-child(3):hover .navbar-list__sb2{
+            display: block;
+        }
+        a.navbar-list__sb2-link:hover{
+            background:aqua;
+            color:red;
+        }
+        .navbar-list__sb1-item:hover a, .navbar-list-sb2-item:hover a{
+            padding-left: 30px;
+            transition:padding ease 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- các thuộc tính position nhìn chung là relative hay absolute, fixed thì đều là di chuyển 
+    tag theo position mà nó phụ thuộc mà không ảnh hưởng tới các thẻ xung quanh. -->
+    <div class="container">
+        <h1 class="heading">Position</h1>
+        <ul class="navbar-list">
+            <li class="navbar-list__item"><a href="#" class="navbar-list__link">Trang chủ</a></li>
+            <li class="navbar-list__item"><a href="#" class="navbar-list__link">Giới thiệu</a>
+                <ul class="navbar-list__sb1">
+                    <li class="navbar-list__sb1-item"><a href="#" class="navbar-list__sb1-link">Thương hiệu</a></li>
+                    <li class="navbar-list__sb1-item"><a href="#" class="navbar-list__sb1-link">Thành tích</a></li>  
+                    <li class="navbar-list__sb1-item"><a href="#" class="navbar-list__sb1-link">Sản phẩm</a>
+                        <ul class="navbar-list__sb2">
+                            <li class="navbar-list__sb2-item"><a href="#" class="navbar-list__sb2-link">Tivi</a></li>
+                            <li class="navbar-list__sb2-item"><a href="#" class="navbar-list__sb2-link">Xe hơi</a></li>  
+                            <li class="navbar-list__sb2-item"><a href="#" class="navbar-list__sb2-link">Biệt thự</a></li>         
+                        </ul>
+                    </li>         
+                </ul>
+            </li>
+            <li class="navbar-list__item"><a href="#" class="navbar-list__link">Tuyển dụng</a></li>
+        </ul>
+    </div>
+</body>
+</html>

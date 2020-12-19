@@ -1,0 +1,13 @@
+/* cách đặt biến thì ta dùng mã giả pseudo :root{} */
+:root{
+    --text-color:green;
+}
+.heading1{
+    color:var(--text-color);
+}
+.heading2{
+    color:var(--text-color);
+}
+.heading3{
+    color:var(--text-color);
+}

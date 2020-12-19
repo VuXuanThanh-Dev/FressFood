@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>độ ưu tiên css </title>
+    <style>
+        .main{
+            color:red;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/doUuTienCss.css">
+</head>
+<body>
+    <!-- với internal(viết bên trong trang html) và external(nhúng từ ngoài vào) thì 2 thằng này 
+    không có cái nào ưu tiên hơn nhau cả mà chỉ khác ở chỗ là thằng nào được khai báo sau mà thôi
+    thằng nào được viết sau thì sẽ được ưu tiên hơn -->
+    <div class="main">
+        <h1 id="heading">heading</h1>
+    </div>
+    <!-- thử thay đổi vị trí của 2 cái internal và external bạn sẽ thấy amazing -->
+    <!-- với các cách còn lại thì điểm độ ưu tiên sẽ là:
+    
+    inline:1000 score
+    id : 100 score
+    class:10 score
+    tag: 1 score
+    Equal specificity: khi cách khai báo được ghi lại một lần nữa thì nó sẽ bị ghi đè lên cái cũ
+    Universal selector : dùng * select cho tất cả
+    inherited là kế thừa từ thằng cha
+
+      -->
+      <div id="container" class="wrapper">
+          <h2 class="hihi" style="color:blue;"> hi hi</h2>
+      </div>
+</body>
+</html>

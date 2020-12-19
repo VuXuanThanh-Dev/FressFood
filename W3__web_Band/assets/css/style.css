@@ -16,6 +16,7 @@ ul{
 }
 html{
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
 }
 /* /end reset  */
 
@@ -58,6 +59,8 @@ html{
 .header__subnav-list{
     position: absolute;
     display: none;
+    border:1px solid #ddd;
+    box-shadow: 0px 2px 6px #ddd;
 }
 .header__nav-link{
     color:white;

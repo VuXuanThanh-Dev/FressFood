@@ -1,0 +1,5 @@
+/* external */
+/* là việc link css từ ngoài vào */
+ul li:nth-child(2){
+    color:blue;
+}

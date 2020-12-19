@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class</title>
+    <style>
+        ul li:first-child{
+            color:red;
+        }
+        ul li:last-child{
+            color:blue;
+        }
+        ul li:active{
+            color:aqua;
+        }
+        input[type="text"]:focus{
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- pseudo class include: 
+         :root{}
+         :focus{}
+         :last-child
+         :first-child
+         :hover khi hover vafo
+         :active: khi click vafo
+          -->
+          <!-- example: -->
+          <div class="container">
+              <ul>
+                  <li>list 1</li>
+                  <li>list 2</li>
+                  <li>list 3</li>
+                  <li>list 4</li>
+                  
+              </ul>
+              <input type="text">
+          </div>
+</body>
+</html>

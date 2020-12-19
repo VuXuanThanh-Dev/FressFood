@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:inline-block</title>
+    <style>
+        li.navbar-list__item{
+            display: inline-block;
+            width:120px;
+            text-align: center;
+            position:relative;
+            box-sizing:border-box;
+            padding:10px 0px;
+            background-clip: padding-box;
+        }
+        li:hover{
+            /* background:aqua */
+        }
+        a{
+            display:block;
+            padding:5px;
+        }
+        a:hover{
+            
+            background:aqua;
+            color:white;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- inline-block: sẽ cho hiển thị item thành chiều ngang và có thể căn chỉnh theo 4 hướng
+    ngoài ra còn có thể set width và height. -->
+    <ul class="navbar-list">
+        <li class="navbar-list__item"><a href="#">  Trang chủ</a></li>
+        <li class="navbar-list__item"><a href="#">Tài chính</a></li>
+        <li class="navbar-list__item"><a href="#">Xã hội</a></li>
+        <li class="navbar-list__item"><a href="#">khác</a></li>
+    </ul>
+</body>
+</html>
