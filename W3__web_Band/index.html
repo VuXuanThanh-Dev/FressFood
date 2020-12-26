@@ -11,16 +11,7 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./font-icon/themify-icons/themify-icons.css">
-    <script>
-     function clickFuction(){
-        let header = document.getElementById("header");
-        header.setAttribute("style", "overflow:visible");
-     }        
-     function OpenFunction(){
-        let header = document.getElementById("header");
-        header.setAttribute("style", "overflow:hiden");
-     }
-    </script>
+    
 </head>
 <body>
     <div class="main">
@@ -55,7 +46,7 @@
         <!-- /header  -->
 
         <!-- slider -->
-        <div class="slider" onclick="OpenFunction()">
+        <div class="slider" onclick="closeFunction()">
             <!-- <img src="./assets/img/new_york.jpg" alt="" class="slider__img"> -->
             <div class="slider__text">
                 <p class="slider__text-place">New York</p>
@@ -65,7 +56,7 @@
         <!-- /slider  -->
 
         <!-- content  -->
-        <div class="content"  onclick="OpenFunction()">
+        <div class="content"  onclick="closeFunction()">
             <!-- about -->
             <div class="content__section" id="band">
                 <h2 class="content__header">THE BAND</h2>
@@ -198,7 +189,7 @@
         <!-- /content  -->
 
         <!-- footer  -->
-        <div class="footer"  onclick="OpenFunction()">
+        <div class="footer"  onclick="closeFunction()">
             <div class="footer__group-icon">
                 <i class="fab fa-facebook-square footer__icon"></i>
                 <i class="fab fa-instagram footer__icon"></i>
@@ -242,5 +233,6 @@
             </div>
         </div>
     </div>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>
