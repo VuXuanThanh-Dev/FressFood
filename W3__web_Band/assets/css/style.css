@@ -31,10 +31,12 @@ html{
     display:flex;
     justify-content: space-between;
     z-index: 1;
+    overflow: hidden;
+   
 }
-.header__nav{
+/* .header__nav{
     height:2.875rem;
-}
+} */
 .header__nav-list{
     height:2.875rem;
 }
@@ -50,7 +52,7 @@ html{
 }
 .header__nav-link{
     display:inline-block;
-    padding:0px 24px;
+    padding:0px 21px;
 }
 .header__nav-item:hover .header__nav-link{
     background:#cccccc;
@@ -61,11 +63,25 @@ html{
     display: none;
     border:1px solid #ddd;
     box-shadow: 0px 2px 6px #ddd;
+    animation-name: subnav;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    
 }
 .header__nav-link{
     color:white;
 }
-
+@keyframes subnav{
+    from{
+        transform: translateY(10px);
+        transform-origin: 50% 0%;
+        opacity:0.2;
+    }
+    to{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
 .header__subnav-list{
     width:9.375rem;
     background:white;
@@ -83,6 +99,8 @@ html{
 
 .header__nav-item:nth-child(5):hover .header__subnav-list{
     display:block;
+    top: 100%;
+    
 }
 
 .header__search{
@@ -155,6 +173,7 @@ html{
 }
 .content__section{
     width:800px;
+    max-width: 100%;
     margin:auto;
     padding-top:87px;
     padding-bottom: 113px;
@@ -181,10 +200,15 @@ html{
 .content__card{
     margin:0 20px;
     margin-right:105px;
-    
+    width:calc(100% / 3);
+    margin-left:47px;
+    margin-right:97px;
+}
+.content__card--mar{
+    margin-right: 47px;
 }
 .content__card, .content__card-picture{
-    width:155px;
+    width:100%;
     text-align: center;
 }
 .content__card-picture{
@@ -303,7 +327,6 @@ html{
 }
 .content__contact{
     display:flex;
-    /* margin-bottom: 114px; */
 }
 .content__form-group{
     display: flex;
@@ -490,4 +513,13 @@ html{
 .fa-times-header{
     color:white;
     cursor: pointer;
+}
+
+.header__icon-bar{
+    font-size: 20px;
+    color:#fff;
+    padding:10px 20px 10px 10px;
+    position: fixed;
+    right:0;
+    display: none;
 }

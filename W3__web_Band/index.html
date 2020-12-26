@@ -9,16 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./font-icon/themify-icons/themify-icons.css">
+    <script>
+     function clickFuction(){
+        let header = document.getElementById("header");
+        header.setAttribute("style", "overflow:visible");
+     }        
+     function OpenFunction(){
+        let header = document.getElementById("header");
+        header.setAttribute("style", "overflow:hiden");
+     }
+    </script>
 </head>
 <body>
     <div class="main">
         <!-- header  -->
-        <div class="header">
+        <div class="header" id="header">
             <!-- header-nav  -->
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--width">Home</a></li>
                     <li class="header__nav-item"><a href="#band" class="header__nav-link">Band</a></li>
                     <li class="header__nav-item"><a href="#tour" class="header__nav-link">Tour</a></li>
                     <li class="header__nav-item"><a href="#contact" class="header__nav-link">Contact</a></li>
@@ -36,11 +47,15 @@
                 <input type="text" class="header__search-input">
                 <button class="header__search-button"><i class="fas fa-search header__search-icon"></i></button>
             </div>
+
+            <!-- button menu  -->
+            
+            <i class="fas fa-bars header__icon-bar" onclick="clickFuction()"></i>
         </div>
         <!-- /header  -->
 
         <!-- slider -->
-        <div class="slider">
+        <div class="slider" onclick="OpenFunction()">
             <!-- <img src="./assets/img/new_york.jpg" alt="" class="slider__img"> -->
             <div class="slider__text">
                 <p class="slider__text-place">New York</p>
@@ -50,7 +65,7 @@
         <!-- /slider  -->
 
         <!-- content  -->
-        <div class="content">
+        <div class="content"  onclick="OpenFunction()">
             <!-- about -->
             <div class="content__section" id="band">
                 <h2 class="content__header">THE BAND</h2>
@@ -67,7 +82,7 @@
                         <img src="./assets/img/content-card.jpg" alt="" class="content__card-picture">
                     </div>
     
-                    <div class="content__card">
+                    <div class="content__card content__card--mar">
                         <h3 class="conent__card-header">Name</h3>
                         <img src="./assets/img/content-card.jpg" alt="" class="content__card-picture">
                     </div>
@@ -115,7 +130,7 @@
                             <button class="content__ticket-booking">Buy Tickets</button>
                         </div>
 
-                        <div class="content__ticket-detail">
+                        <div class="content__ticket-detail content__ticket-detail--margin">
                             <img src="./assets/img/ticket3.jpg" alt="New York" class="content__ticket-img">
                             <h3 class="content__ticket-header content__ticket-text">New York</h3>
                             <p class="content__ticket-date">Sun 29 Nov 2020</p>
@@ -183,7 +198,7 @@
         <!-- /content  -->
 
         <!-- footer  -->
-        <div class="footer">
+        <div class="footer"  onclick="OpenFunction()">
             <div class="footer__group-icon">
                 <i class="fab fa-facebook-square footer__icon"></i>
                 <i class="fab fa-instagram footer__icon"></i>

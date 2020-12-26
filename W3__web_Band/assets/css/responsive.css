@@ -1,0 +1,93 @@
+@media (max-width:740px){
+    .header{
+        /* height: auto; */
+        display: block;
+    }
+    .header__nav-item{
+        display: block;
+        width:100%;
+        background-color: #000;
+    }
+    .header__nav-link{
+        display: block;
+    }
+    .header__nav{
+        display: inline-block;
+        width: 100%;
+    }
+    .header__search{
+        display: none;
+    }
+    .header__icon-bar{
+        display: inline-block;
+    }
+    .header__nav-link--width{
+        width:50%;
+    }
+    .content__section{
+        padding-left:17px;
+        padding-right: 17px;
+    }
+    .content__card-group{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .content__card{
+        margin:0 20px;
+        margin-right:0;
+        width:100%;
+        margin-left:91px;
+        margin-right:91px;
+    }
+    .content__ticket{
+        display:flex;
+        flex-wrap: wrap;
+    
+    }
+    .content__ticket-detail{
+        width: 100%;
+        margin-bottom:17px;
+    }
+    .content__ticket-detail--margin{
+        margin-bottom: 0px;
+    }
+    .content__ticket-detail--padding{
+        margin:0 0 17px 0;
+    }
+    .content__contact{
+        display:block;
+    }
+    .content__form-group{
+        display: block;
+    }
+    .content__feedback{
+        width:100%;
+    }
+    .content__form-item--marginRight{
+        margin-right: 0;
+    }
+    .content__contact-infor{
+        width:100%;
+    }
+    .header__nav-item:nth-child(5):hover .header__subnav-list{
+        display:none;
+        top: 100%;
+        
+    }
+    .fa-sort-down{
+        display: none;
+    }
+}
+
+@media (min-width:741px) and (max-width:1023px){
+    .content__section{
+        padding-left:17px;
+        padding-right: 17px;
+    }
+    .content__feedback{
+        width:60%;
+    }
+    .content__contact-infor{
+        width:40%;
+    }
+}
